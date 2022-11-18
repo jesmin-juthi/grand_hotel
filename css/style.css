@@ -148,6 +148,64 @@ body {
   right: 1rem;
 }
 
+.menu-list {
+  list-style: none;
+  padding: 0;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.menu-link::before,
+.menu-link::after {
+  content: "";
+  width: 0;
+  height: 0.1rem;
+  background-color: var(--primary);
+  position: absolute;
+  top: 1rem;
+  transition: 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.menu-link::before {
+  left: -4rem;
+}
+
+.menu-link::after {
+  right: -4rem;
+}
+
+.menu-link:hover {
+  color: var(--primary);
+}
+
+.menu-link:hover::before,
+.menu-link:hover::after {
+  width: 3rem;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
 /* menu ends */
 
 /* end of navbar */
