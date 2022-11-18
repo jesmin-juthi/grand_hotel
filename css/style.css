@@ -34,6 +34,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .menu-icon {
@@ -51,7 +52,7 @@ body {
 .line-1,
 .line-3 {
   width: 1.8rem;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .menu-icon:hover .line {
@@ -89,7 +90,8 @@ body {
 /* menu starts */
 
 .menu {
-  margin-left: 8rem;
+  /* margin-left: 8rem; */
+  left: -32rem;
   position: fixed;
   width: 40rem;
   height: 100%;
@@ -104,6 +106,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: 0.8s cubic-bezier(1, 0, 0, 1);
 }
 
 .menu-heading {
@@ -204,6 +207,28 @@ body {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   color: #fff;
+}
+
+/* menu function */
+
+.check:checked ~ .menu {
+  left: 8rem;
+}
+
+.check:checked ~ .sidebar .line-1 {
+  rotate: -405deg;
+  transform: translate(-5px, 6px);
+  width: 2.5rem;
+}
+
+.check:checked ~ .sidebar .line-2 {
+  opacity: 0;
+}
+
+.check:checked ~ .sidebar .line-3 {
+  rotate: 405deg;
+  transform: translate(-5px, -6px);
+  width: 2.5rem;
 }
 
 /* menu ends */
