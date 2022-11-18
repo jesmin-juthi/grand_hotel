@@ -24,7 +24,7 @@ body {
 .sidebar {
   width: 8rem;
   height: 100%;
-  background-color: #eee;
+  background-color: #eaeaea;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -81,5 +81,14 @@ body {
 }
 
 /* sidebar ends*/
+
+/* menu starts */
+
+.menu {
+  margin-left: 8rem;
+  position: fixed;
+}
+
+/* menu ends */
 
 /* end of navbar */
